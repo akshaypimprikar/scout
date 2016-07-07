@@ -36,7 +36,7 @@ class PlaceDetailViewController: UIViewController {
 
             let latitude = location!!["lat"]
             let longitude = location!!["lng"]
-            self.locationCoordinates.text = String(format: "Latitude: \(latitude) Longitude:\(longitude)")
+            self.locationCoordinates.text = String(format: "Latitude: \(latitude!!) Longitude:\(longitude!!)")
             
             let types = String(responseJSON["types"]!!.description)            
             self.locationType.text = types
